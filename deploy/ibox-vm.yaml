@@ -1,0 +1,47 @@
+# Lima VM for ibox execution plane (Apple Silicon)
+# Creates an Ubuntu 24.04 VM provisioned with gVisor (runsc) + node-agent dirs.
+vmType: vz
+rosetta:
+  enabled: true
+images:
+  - location: "https://cloud-images.ubuntu.com/releases/24.04/release/ubuntu-24.04-server-cloudimg-arm64.img"
+    arch: "aarch64"
+cpus: 6
+memory: 10GiB
+disk: 120GiB
+containerd:
+  system: true
+  user: false
+provision:
+  - mode: system
+    script: |
+      #!/bin/bash
+      set -euxo pipefail
+      export DEBIAN_FRONTEND=noninteractive
+      apt-get update
+      apt-get install -y --no-install-recommends e2fsprogs util-linux zstd jq debootstrap curl ca-certificates
+      # gVisor: latest release ships as a tarball (runsc + containerd shim + gvisor-bin sidecars)
+      cd /tmp
+      curl -fsSL https://storage.googleapis.com/gvisor/releases/release/latest/aarch64/gvisor.tar.zstd -o gvisor.tar.zstd
+      tar --zstd -xf gvisor.tar.zstd
+      install -m 0755 runsc /usr/local/bin/runsc
+      install -m 0755 containerd-shim-runsc-v1 /usr/local/bin/containerd-shim-runsc-v1
+      mkdir -p /usr/local/bin/gvisor-bin
+      install -m 0755 gvisor-bin/* /usr/local/bin/gvisor-bin/
+      rm -rf /tmp/gvisor.tar.zstd /tmp/runsc /tmp/containerd-shim-runsc-v1 /tmp/gvisor-bin
+      runsc --version
+      # containerd runtime registration (optional; the agent drives runsc directly)
+      mkdir -p /etc/containerd
+      cat > /etc/containerd/config.toml <<'EOF'
+      version = 2
+      root = "/var/lib/containerd"
+      state = "/run/containerd"
+      [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runsc]
+        runtime_type = "io.containerd.runsc.v1"
+      EOF
+      systemctl restart containerd || true
+      # agent dirs
+      mkdir -p /var/lib/ibox-agent/rootfs /var/lib/ibox-agent/machines \
+               /var/lib/ibox-agent/tmp /var/lib/ibox-agent/cas \
+               /var/lib/ibox-agent/snapshots /var/lib/ibox-agent/runsc-root/runsc
+      echo "provision done"

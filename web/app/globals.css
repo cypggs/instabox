@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg: #0a0a0f;
+  --bg-panel: #12121a;
+  --bg-elevated: #1a1a24;
+  --border: #262636;
+  --text: #e4e4ef;
+  --text-dim: #8b8ba3;
+  --accent: #7c6cf5;
+  --accent-hover: #9487ff;
+  --green: #22c55e;
+  --red: #ef4444;
+  --amber: #f59e0b;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+  --sans: "Inter", -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: var(--sans); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); }
+
+button {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: all .15s;
+}
+button:hover { border-color: var(--accent); }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button.primary { background: var(--accent); border-color: var(--accent); color: white; }
+button.primary:hover { background: var(--accent-hover); }
+button.danger { color: var(--red); border-color: rgba(239,68,68,.35); }
+button.danger:hover { border-color: var(--red); background: rgba(239,68,68,.08); }
+button.ghost { background: transparent; border-color: transparent; color: var(--text-dim); }
+button.ghost:hover { color: var(--text); border-color: var(--border); }
+
+input, select, textarea {
+  font-family: var(--sans);
+  font-size: 13px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 8px 10px;
+  outline: none;
+  width: 100%;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--accent); }
+label { font-size: 12px; color: var(--text-dim); display: block; margin-bottom: 5px; font-weight: 500; }
+
+.mono { font-family: var(--mono); }
+.dim { color: var(--text-dim); }
+.small { font-size: 12px; }
+
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+.badge .dot { width: 7px; height: 7px; border-radius: 50%; }
+
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-dim); padding: 10px 14px; border-bottom: 1px solid var(--border); font-weight: 600; }
+td { padding: 12px 14px; border-bottom: 1px solid rgba(38,38,54,.5); font-size: 13px; }
+
+.tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--border); padding: 0 16px; overflow-x: auto; }
+.tabs button {
+  border: none; background: transparent; border-radius: 0;
+  padding: 11px 14px; color: var(--text-dim); font-weight: 500;
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+}
+.tabs button:hover { color: var(--text); }
+.tabs button.active { color: var(--text); border-bottom-color: var(--accent); }
+
+.toast {
+  position: fixed; bottom: 24px; right: 24px; z-index: 100;
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  border-radius: 8px; padding: 12px 16px; font-size: 13px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.5);
+  max-width: 420px;
+}
+.toast.error { border-color: var(--red); }
+.toast.ok { border-color: var(--green); }
+
+.modal-backdrop {
+  position: fixed; inset: 0; background: rgba(4,4,10,.72);
+  display: flex; align-items: flex-start; justify-content: center;
+  z-index: 50; padding: 6vh 16px; overflow-y: auto;
+  backdrop-filter: blur(4px);
+}
+.modal {
+  background: var(--bg-panel); border: 1px solid var(--border);
+  border-radius: 12px; width: 100%; max-width: 620px;
+  box-shadow: 0 20px 80px rgba(0,0,0,.6);
+}
+
+::selection { background: rgba(124,108,245,.4); }

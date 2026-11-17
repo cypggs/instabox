@@ -1,0 +1,34 @@
+{
+  "snapshots": {
+    "url": "https://dashboard.instabox.sh/dashboard/snapshots",
+    "text": "Snapshots\nOfficial\nPersonal\nSnapshots\nNAME\tRESOURCES\tLAST USED\t\nACTIONS\n\nandroid-medium\n\t\n4 vCPU\n8 GiB\n20 GiB\n\t—\t\n\nomarchy-medium\n\t\n4 vCPU\n8 GiB\n20 GiB\n\t2d ago\t\n\nstandard-medium\n\t\n4 vCPU\n8 GiB\n20 GiB\n\t18d ago\t\n\nandroid-small\nInstaBox Pro\n\t\n2 vCPU\n4 GiB\n20 GiB\n\t—\t\n\nandroid-large\nInstaBox Pro\n\t\n8 vCPU\n16 GiB\n20 GiB\n\t—\t\n\nGPU (Linux)\nInstaBox Pro\n\tSet by GPU type and count\t—\t\n\nminimal-small\nInstaBox Pro\n\t\n2 vCPU\n4 GiB\n20 GiB\n\t—\t\n\nminimal-medium\nInstaBox Pro\n\t\n4 vCPU\n8 GiB\n20 GiB\n\t—\t\n\nminimal-large\nInstaBox Pro\n\t\n8 vCPU\n16 GiB\n20 GiB\n\t—\t\n\nomarchy-small\nInstaBox Pro\n\t\n2 vCPU\n4 GiB\n20 GiB\n\t—\t\n\nomarchy-large\nInstaBox Pro\n\t\n8 vCPU\n16 GiB\n20 GiB\n\t—\t\n\nstandard-small\nInstaBox Pro\n\t\n2 vCPU\n4 GiB\n20 GiB\n\t—\t\n\nstandard-large\nInstaBox Pro\n\t\n8 vCPU\n16 GiB\n20 GiB\n\t—\t"
+  },
+  "secrets": {
+    "url": "https://dashboard.instabox.sh/dashboard/secrets",
+    "text": "Secrets\n\n0/100 secrets used\n\nAdd Secret\n\nNo Secrets yet.\nSecrets store sensitive values that can be injected into sandboxes at runtime.\nCreate one to get started."
+  },
+  "api-keys": {
+    "url": "https://dashboard.instabox.sh/dashboard/api-keys",
+    "text": "API keys\nCreate Key\nAPI keys\nNAME\tKEY\tPERMISSIONS\tCREATED\tLAST USED\tEXPIRES\t\nACTIONS\n\n1102\tibk_5j64qbds…\tFull Access\t15d ago\t3d ago\tnever\tRevoke\nbox\tibk_rb5c4r5o…\tFull Access\t30d ago\t20h ago\tin 334d\tRevoke"
+  },
+  "webhooks": {
+    "url": "https://dashboard.instabox.sh/dashboard/webhooks",
+    "text": "Webhooks\n\nSigned HTTPS events when sandboxes and snapshots change.\n\n1 of 10 endpoints\n\nAdd endpoint\nWebhook endpoints\nENDPOINT\tEVENTS\tSTATUS\tCREATED\tACTIONS\n\nhttps://open.feishu.cn/open-apis/bot/v2/hook/32935015-228f-4afc-8c8e-e8270c289929\n\tAll events\t\nEnabled\t14d ago\t"
+  },
+  "ci": {
+    "url": "https://dashboard.instabox.sh/dashboard/ci",
+    "text": "CI\nCopy prompt\n1\nConnect GitHub\n\nInstall the instabox App and choose repositories.\n\nConnect GitHub\nor run instabox ci\n2\nChange runs-on in your workflow to instabox-medium\n  jobs:\n    test:\n-     runs-on: ubuntu-latest\n+     runs-on: instabox-medium\n\nCommit and push it to the repository.\n\n3\nRun your first job\n\nFor more information about CI with instabox, read the docs."
+  },
+  "members": {
+    "url": "https://dashboard.instabox.sh/dashboard/members",
+    "text": "Members\n\nYour personal org is just you. To work with others, create a workspace and invite them: members share its machines and snapshots.\n\nCreate a workspace"
+  },
+  "usage": {
+    "url": "https://dashboard.instabox.sh/dashboard/usage",
+    "text": "Usage\n\ncypggs@gmail.com · personal\n\nNov 1 – Dec 1, 2026\nFree Plan\n\n5 free sandboxes, never billed\n\nUpgrade"
+  },
+  "billing": {
+    "url": "https://dashboard.instabox.sh/dashboard/billing",
+    "text": "Billing\nSubscription\nChange plan\nFree Plan\n\nFree"
+  }
+}

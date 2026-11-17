@@ -1,0 +1,30 @@
+# Binaries & build output
+/bin/
+*.o
+*.a
+ibox-agent
+ibox-control
+
+# Local data & logs
+*.db
+*.db-wal
+*.db-shm
+*.log
+/tmp/
+
+# Web
+web/node_modules/
+web/.next/
+web/out/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Secrets — never commit real tokens
+.env
+.env.*
+*.pem
+*.key

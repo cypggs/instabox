@@ -1,0 +1,2324 @@
+{
+  "me": {
+    "userId": -7822,
+    "login": "cypggs@gmail.com",
+    "name": "esac wu",
+    "avatarUrl": "https://workoscdn.com/images/v1/5BFEPs74ew_oFCPgsCCZN4B3_NuntQTS71uKrd13m2Q",
+    "email": "cypggs@gmail.com",
+    "admin": false,
+    "machineMetrics": true,
+    "billingEnabled": true,
+    "webhooksEnabled": true,
+    "emailInvites": true,
+    "plans": [
+      {
+        "tier": "pro",
+        "monthlyFeeUSD": 20,
+        "maxMachines": 500,
+        "maxRunning": 100,
+        "maxVCPUs": 8,
+        "maxDiskGiB": 200
+      },
+      {
+        "tier": "builder",
+        "monthlyFeeUSD": 100,
+        "maxMachines": 1000,
+        "maxRunning": 200,
+        "maxVCPUs": 16,
+        "maxDiskGiB": 500
+      },
+      {
+        "tier": "team",
+        "monthlyFeeUSD": 500,
+        "maxMachines": 0,
+        "maxRunning": 500,
+        "maxVCPUs": 32,
+        "maxDiskGiB": 1024
+      }
+    ],
+    "csrfToken": "uOywQvudxlz5n38ld8_pU_clJGEEFnr5",
+    "allowedSpecs": [
+      {
+        "vcpus": 4,
+        "memMiB": 8192,
+        "persistentDiskGiB": 20
+      }
+    ],
+    "org": {
+      "id": "org_0d1deedc1d074283b122e4fea341f20e",
+      "name": "cypggs@gmail.com",
+      "tier": "free",
+      "kind": "personal"
+    },
+    "inviteRequired": false,
+    "activated": true,
+    "manualLifecycle": false,
+    "idleChoicesSeconds": [
+      300,
+      600,
+      900,
+      1200,
+      1500,
+      1800
+    ],
+    "resizeRestart": true,
+    "termsVersion": "2026-11-16"
+  },
+  "orgs": {
+    "orgs": [
+      {
+        "id": "org_0d1deedc1d074283b122e4fea341f20e",
+        "name": "cypggs@gmail.com",
+        "tier": "free",
+        "kind": "personal",
+        "personal": true,
+        "role": "owner",
+        "createdAt": "2026-10-18T06:37:36.424028Z",
+        "allowedSpecs": [
+          {
+            "vcpus": 4,
+            "memMiB": 8192,
+            "persistentDiskGiB": 20
+          }
+        ]
+      }
+    ]
+  },
+  "templates": {
+    "templates": [
+      {
+        "id": "base",
+        "version": "2026-10-07.1",
+        "digest": "sha256:4fba6c82715a623065754d97a176c1faabf36e15ec87e9193d560ae8c65734fc",
+        "description": "Retired: Debian with SSH and the instabox guest agent",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow"
+        ],
+        "hidden": true,
+        "creatable": false
+      },
+      {
+        "id": "dev",
+        "version": "2026-10-07.1",
+        "digest": "sha256:b16ab416e668443b1afd6f516bd8f4051f4dbc080154a863600b9de94ab126f4",
+        "description": "Retired: base plus gh, Node.js, Claude Code and Codex",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow"
+        ],
+        "hidden": true,
+        "creatable": false
+      },
+      {
+        "id": "herdr",
+        "version": "2026-10-07.1",
+        "digest": "sha256:d792a449e6ad8940c98e84dc872f0bbdfcdf5ed8efd547bc53956da1e3b84ab1",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the herdr runtime, for herdr clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "herdr",
+        "version": "2026-10-07.4",
+        "digest": "sha256:a5a11ec167f72dbc08f4b6ec2d2783ea64b3bac2e73df017451f7ccc6144ca02",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the herdr runtime, for herdr clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "herdr",
+        "version": "2026-10-08.2",
+        "digest": "sha256:7b20cf11fcfbe4ff501dd37d7b6911da8ee0957ed6883f7434066bb7185ec1ad",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the herdr runtime, for herdr clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 8
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "herdr",
+        "version": "2026-10-09.1",
+        "digest": "sha256:2916bc0ef1499294e8560d6ea8c218c3e459d5d298779acb26ecd38d6052c5a0",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the herdr runtime, for herdr clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 8
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "activity"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "herdr",
+        "version": "2026-10-09.2",
+        "digest": "sha256:381fd533ff84e832071418d7ad1e0e40cb144815620449d49c306d5154328099",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the herdr runtime, for herdr clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 8
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "activity"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "herdr",
+        "version": "2026-10-13.10",
+        "digest": "sha256:ee46c3cc75e774a868fcdb27b6dc271d8beb802b2c8c7da7e3c442537ce3b986",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the herdr runtime, for herdr clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 8
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "activity"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "herdr",
+        "version": "2026-10-14.1",
+        "digest": "sha256:6f810fccbc357b4e089c59ea9a78a84f528dc77704a6274bc2c35f19773f5992",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the herdr runtime, for herdr clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 8
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "activity"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "herdr",
+        "version": "2026-10-15.4",
+        "digest": "sha256:071390dc0f3d1d23669ebf3d92ef849747b47b13ae694b955b358b7cc8b6087e",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the herdr runtime, for herdr clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 8
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "activity",
+          "guest-user"
+        ],
+        "creatable": true
+      },
+      {
+        "id": "herdr",
+        "version": "2026-11-01.3-android.1-cli.1",
+        "digest": "sha256:c781919cea4b8c00003d41dbabd7b99151a433c412659f538c7296c1531b1a62",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the herdr runtime, for herdr clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 8
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "activity",
+          "guest-user"
+        ],
+        "creatable": true,
+        "latest": true
+      },
+      {
+        "id": "orca",
+        "version": "2026-10-07.1",
+        "digest": "sha256:41c70067159576056b15119fdd0072dfe03136ebfd6fcb73e2e7bc78f9b5ab40",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the Orca runtime, for Orca desktop and mobile clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "orca"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "orca",
+        "version": "2026-10-07.4",
+        "digest": "sha256:2e052e2f8f367675af32e69df7a057951dac85160520c3c3d4812d6d490ee0ab",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the Orca runtime, for Orca desktop and mobile clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "orca"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "orca",
+        "version": "2026-10-08.2",
+        "digest": "sha256:60e62ff42176d800c31cefd8a40fd6285bbb5f965ece1b14bbf5fb944d43c86d",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the Orca runtime, for Orca desktop and mobile clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 6
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "orca"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "orca",
+        "version": "2026-10-09.1",
+        "digest": "sha256:1485e3f975b69120e1c39da2b71c518f95fbac22bbc452850baf2744be22b66a",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the Orca runtime, for Orca desktop and mobile clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 6
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "orca"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "orca",
+        "version": "2026-10-09.2",
+        "digest": "sha256:41ac5c35085cacc75de16201948776465844408555f6945e70eb36df577b8c40",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the Orca runtime, for Orca desktop and mobile clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 8
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "orca"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "orca",
+        "version": "2026-10-13.10",
+        "digest": "sha256:bd210b55dd18488035fd3e530d5ad5c9f2c0e8c4deee91b73bceca990ceb6983",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the Orca runtime, for Orca desktop and mobile clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 8
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "orca"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "orca",
+        "version": "2026-10-14.1",
+        "digest": "sha256:f660317ef5e82271c45bc15b14597bd501c6f3ef128061edbc021010aa264971",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the Orca runtime, for Orca desktop and mobile clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 8
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "orca"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "orca",
+        "version": "2026-10-15.4",
+        "digest": "sha256:8b3448c00dfcfe8a57e09fa5aa4da8573126a8ec7b927f7abd8af4821be3726c",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the Orca runtime, for Orca desktop and mobile clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 8
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "orca",
+          "guest-user"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "orca",
+        "version": "2026-11-01.3-android.1-cli.1",
+        "digest": "sha256:226e36fb75673f406389b1302b2a5cd9d9d6c20dbcf0440273a782d7dcb26c6e",
+        "description": "The dev tools (gh, Node.js, Claude Code, Codex, OpenCode) plus a desktop and the Orca runtime, for Orca desktop and mobile clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 8
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "orca",
+          "guest-user"
+        ],
+        "creatable": true,
+        "latest": true
+      },
+      {
+        "id": "universal",
+        "version": "2026-10-08.2",
+        "digest": "sha256:7269aca9ab49ee143ee7da13defe75d57c6ca7a81a534b0a46796c8ab346517f",
+        "description": "gh, Node.js, Bun, pnpm, Yarn, Claude Code, Codex, OpenCode, Docker, Python (uv), Go, Rust, a JDK (OpenJDK 21) and a C toolchain; the desktop is installed on request",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "universal",
+        "version": "2026-10-09.2",
+        "digest": "sha256:b1a32bcbe84ced5996bb351e4ff3f273d5fa2f3e101666fd32707019fa9d39ed",
+        "description": "gh, Node.js, Bun, pnpm, Yarn, Claude Code, Codex, OpenCode, Docker, Python (uv), Go, Rust, a JDK (OpenJDK 21) and a C toolchain; the desktop is installed on request",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "universal",
+        "version": "2026-10-12.1",
+        "digest": "sha256:0834ea3728f1e088185ab91a7739f407f85a8f2fd71c7dfd4a41f32c8328cabd",
+        "description": "gh, Node.js, Bun, pnpm, Yarn, Claude Code, Codex, OpenCode, Docker, Python (uv), Go, Rust, a JDK (OpenJDK 21) and a C toolchain; the desktop is installed on request",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "universal",
+        "version": "2026-10-13.2",
+        "digest": "sha256:f697afdeeebbdf704ca7520b5cd514305bcf27c37d4474dbe579e0a5238605c0",
+        "description": "gh, Node.js, Bun, pnpm, Yarn, Claude Code, Codex, OpenCode, Docker, Python (uv), Go, Rust, a JDK (OpenJDK 21) and a C toolchain; the desktop is installed on request",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "universal",
+        "version": "2026-10-13.10",
+        "digest": "sha256:9a961612b78c183adf5136b603f9c2971962c9ffe201695bcab7c175f1ff7768",
+        "description": "gh, Node.js, Bun, pnpm, Yarn, Claude Code, Codex, OpenCode, Docker, Python (uv), Go, Rust, a JDK (OpenJDK 21) and a C toolchain; the desktop is installed on request",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "universal",
+        "version": "2026-10-14.1",
+        "digest": "sha256:1cb284afb35630430f354246a7ece186ae49e709000b110954cb259f6b6a7781",
+        "description": "gh, Node.js, Bun, pnpm, Yarn, Claude Code, Codex, OpenCode, Docker, Python (uv), Go, Rust, a JDK (OpenJDK 21) and a C toolchain; the desktop is installed on request",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "universal",
+        "version": "2026-10-15.4",
+        "digest": "sha256:a37c5b145431119bfad61f5190a2f4ba69e6abb0fd8641fb73a772e440fa470d",
+        "description": "gh, Node.js, Bun, pnpm, Yarn, Claude Code, Codex, OpenCode, Docker, Python (uv), Go, Rust, a JDK (OpenJDK 21) and a C toolchain; the desktop is installed on request",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "universal",
+        "version": "2026-10-25.16",
+        "digest": "sha256:b5729cc5af6f9d85bc87059d486fda31b673a0fc5dc54bc1614f3fec2af5a4c1",
+        "description": "gh, Node.js, Bun, pnpm, Yarn, Claude Code, Codex, OpenCode, Docker, Python (uv), Go, Rust, a JDK (OpenJDK 21) and a C toolchain; the desktop is installed on request",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "universal",
+        "version": "2026-10-25.22",
+        "digest": "sha256:a50426ff9dde59e029402d3ebf3eef87863028f09e63bf68022e54c41dc1ed91",
+        "description": "gh, Node.js, Bun, pnpm, Yarn, Claude Code, Codex, OpenCode, Docker, Python (uv), Go, Rust, a JDK (OpenJDK 21) and a C toolchain; the desktop is installed on request",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "universal",
+        "version": "2026-10-29.18",
+        "digest": "sha256:a1a162fd0c7e13b76f06bc33204acc9732e111b97ca9ef2e0639ef7c582a5b98",
+        "description": "gh, Node.js, Bun, pnpm, Yarn, Claude Code, Codex, OpenCode, Docker, Python (uv), Go, Rust, a JDK (OpenJDK 21) and a C toolchain; the desktop is installed on request",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "universal",
+        "version": "2026-10-25.23",
+        "digest": "sha256:2b0966811393a20ad3eb28099c210fff6bf7541ddb4951508c553ed63e82516b",
+        "description": "gh, Node.js, Bun, pnpm, Yarn, Claude Code, Codex, OpenCode, Docker, Python (uv), Go, Rust, a JDK (OpenJDK 21) and a C toolchain; the desktop is installed on request",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": true
+      },
+      {
+        "id": "universal",
+        "version": "2026-11-01.3-android.1-cli.1",
+        "digest": "sha256:aef485d7fc1d905b2df62f6ad6faa64bd96ed9978f83344075de0fbd33acf448",
+        "description": "gh, Node.js, Bun, pnpm, Yarn, Claude Code, Codex, OpenCode, Docker, Python (uv), Go, Rust, a JDK (OpenJDK 21) and a C toolchain; the desktop is installed on request",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": true
+      },
+      {
+        "id": "universal",
+        "version": "2026-11-14.2815",
+        "digest": "sha256:b2c6ca99f11540cbde02c508533581018512868b6fa435d011f73547491484c1",
+        "description": "gh, Node.js, Bun, pnpm, Yarn, Claude Code, Codex, OpenCode, Docker, Python (uv), Go, Rust, a JDK (OpenJDK 21) and a C toolchain; the desktop is installed on request",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": true,
+        "latest": true
+      },
+      {
+        "id": "agent-browser",
+        "version": "2026-10-12.1",
+        "digest": "sha256:0ea606d693dc8f570c3b3c3a2a4a981d5eb6415fdcbc34517812fa19dfce4bd1",
+        "description": "The default: universal plus a desktop (Chromium, VNC, Xfce) for agents that browse or drive a GUI",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "agent-browser",
+        "version": "2026-10-13.2",
+        "digest": "sha256:ca6d102d5ee37b52729320ab54e1f300da67f73150e53ba9bb9c4347a5c5eb05",
+        "description": "The default: universal plus a desktop (Chromium, VNC, Xfce) for agents that browse or drive a GUI",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "agent-browser",
+        "version": "2026-10-13.10",
+        "digest": "sha256:b870cdb7a83c3935b3732e6b90f3a2e1a6bdfa12c39917c7bf48a7792a66252a",
+        "description": "The default: universal plus a desktop (Chromium, VNC, Xfce) for agents that browse or drive a GUI",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "agent-browser",
+        "version": "2026-10-14.1",
+        "digest": "sha256:0f18b53c2d230a7d8d9da6e8e7454a2d416ab0c5ebcf0b156dc13308c72deb66",
+        "description": "The default: universal plus a desktop (Chromium, VNC, Xfce) for agents that browse or drive a GUI",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "agent-browser",
+        "version": "2026-10-15.4",
+        "digest": "sha256:dcd05703722b04dc1ccea03264ce13ec96cb431423c9419d7394bec97f0cf52f",
+        "description": "The default: universal plus a desktop (Chromium, VNC, Xfce) for agents that browse or drive a GUI",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "agent-browser",
+        "version": "2026-10-25.16",
+        "digest": "sha256:6149f9f153c9c73d9eea24bb43e57b331cfce53f643b41523fd63cb7ced83eff",
+        "description": "The default: universal plus a desktop (Chromium, VNC, Xfce) for agents that browse or drive a GUI",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "agent-browser",
+        "version": "2026-10-25.22",
+        "digest": "sha256:81f44216b48411bdb89b807b6723591de3eaeffa1b6671a462164915244e09e5",
+        "description": "The default: universal plus a desktop (Chromium, VNC, Xfce) for agents that browse or drive a GUI",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "agent-browser",
+        "version": "2026-10-25.23",
+        "digest": "sha256:a2465775c94f801d9433982b4138b8b587fe54c44c3b2371a09a4580b5ab66db",
+        "description": "The default: universal plus a desktop (Chromium, VNC, Xfce) for agents that browse or drive a GUI",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": true
+      },
+      {
+        "id": "agent-browser",
+        "version": "2026-10-29.18",
+        "digest": "sha256:bd882c53b069da157ce42cce61771d6e4df80a9b9f3a1b820ee6c6216c81890d",
+        "description": "The default: universal plus a desktop (Chromium, VNC, Xfce) for agents that browse or drive a GUI",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": true
+      },
+      {
+        "id": "agent-browser",
+        "version": "2026-11-01.3-android.1-cli.1",
+        "digest": "sha256:808062679e901d9cd95cf734e7fd5def01e00e18bbd6d9e78d00e56413ffb710",
+        "description": "The default: universal plus a desktop (Chromium, VNC, Xfce) for agents that browse or drive a GUI",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": true
+      },
+      {
+        "id": "agent-browser",
+        "version": "2026-11-14.2815",
+        "digest": "sha256:c7eb741804c1e67a4137fecdfbbb12cfdc35c30ef0df01fd7f39d9553dfe6779",
+        "description": "The default: universal plus a desktop (Chromium, VNC, Xfce) for agents that browse or drive a GUI",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": true,
+        "latest": true,
+        "default": true,
+        "preboot": true,
+        "prebootSpecs": [
+          {
+            "vcpus": 4,
+            "memMiB": 8192,
+            "persistentDiskGiB": 20
+          },
+          {
+            "vcpus": 2,
+            "memMiB": 4096,
+            "persistentDiskGiB": 20
+          },
+          {
+            "vcpus": 8,
+            "memMiB": 16384,
+            "persistentDiskGiB": 20
+          }
+        ]
+      },
+      {
+        "id": "t3",
+        "version": "2026-10-25.22",
+        "digest": "sha256:f26fe8503ff96962502db7c157bb7449e655c4f92c9a4b0db8304285cc150b72",
+        "description": "universal plus the T3 Code server, for T3 Code desktop and mobile clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "t3",
+        "version": "2026-10-25.23",
+        "digest": "sha256:5cff4a09787a09a59eee8e2e8474007c85bea5f4d42069864523546206c970ab",
+        "description": "universal plus the T3 Code server, for T3 Code desktop and mobile clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user",
+          "activity"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "t3",
+        "version": "2026-10-23.6",
+        "digest": "sha256:a9e72d81730ea4c372a34ba723ad184e097e6cd48fe7d455e973251edd2f3e82",
+        "description": "universal plus the T3 Code server, for T3 Code desktop and mobile clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "t3",
+        "version": "2026-10-29.10-ci.1-t3.1",
+        "digest": "sha256:0054b2d47ed20f7ad42a726e3c1476382648406ed13bae4f9b5fcf6f38678446",
+        "description": "universal plus the T3 Code server, for T3 Code desktop and mobile clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user",
+          "activity"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "t3",
+        "version": "2026-11-01.3-android.1-cli.1",
+        "digest": "sha256:fb9f930aa12eb5b1f865e0a7ecb8ee2d85c72a9ae48900f11185b77aff732c47",
+        "description": "universal plus the T3 Code server, for T3 Code desktop and mobile clients",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user",
+          "activity"
+        ],
+        "creatable": true,
+        "latest": true
+      },
+      {
+        "id": "omarchy",
+        "version": "2026-10-28.1",
+        "digest": "sha256:1a230ee66f488416da2d59008257360db7c37d703ab5011d669b2bdf102990f5",
+        "description": "Arch Linux with Omarchy: its Hyprland desktop, themes and tools, logged in from boot",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "kernel": "sha256:0e8c75349f49d9ceb7ef86e89afd57b2ead87f97766969571c355e500b3f7468",
+        "creatable": false
+      },
+      {
+        "id": "omarchy",
+        "version": "2026-10-28.7",
+        "digest": "sha256:6ee46be812caaac529db62d4168fe6deb956aa8827a9af58aefd6a2bf7c73086",
+        "description": "Arch Linux with Omarchy: its Hyprland desktop, themes and tools, logged in from boot",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "kernel": "sha256:0e8c75349f49d9ceb7ef86e89afd57b2ead87f97766969571c355e500b3f7468",
+        "creatable": false
+      },
+      {
+        "id": "omarchy",
+        "version": "2026-11-01.3-android.1-cli.1-omarchy.1",
+        "digest": "sha256:6fe0eba06feb39442c154908d32f98188b4caa9e26709926a5ce5f10d078d2bd",
+        "description": "Arch Linux with Omarchy: its Hyprland desktop, themes and tools, logged in from boot",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "kernel": "sha256:269a8c0ba45531fa82432f0d14c2dce9a3466a5f5a0c9fa4d395b848fcfa7da2",
+        "creatable": false
+      },
+      {
+        "id": "omarchy",
+        "version": "2026-10-28.9",
+        "digest": "sha256:1eaf24cad774c5fa4babb4a7d2e6561ce867315c12091d2d5aff657f25305a8e",
+        "description": "Arch Linux with Omarchy: its Hyprland desktop, themes and tools, logged in from boot",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "kernel": "sha256:0e8c75349f49d9ceb7ef86e89afd57b2ead87f97766969571c355e500b3f7468",
+        "creatable": false
+      },
+      {
+        "id": "omarchy",
+        "version": "2026-11-02.19",
+        "digest": "sha256:940114a2888bea2a74766db9194924ee3ad3c70cfee2557188cf3b71519d80e5",
+        "description": "Arch Linux with Omarchy: its Hyprland desktop, themes and tools, logged in from boot",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "kernel": "sha256:269a8c0ba45531fa82432f0d14c2dce9a3466a5f5a0c9fa4d395b848fcfa7da2",
+        "creatable": false
+      },
+      {
+        "id": "omarchy",
+        "version": "2026-11-03.1580",
+        "digest": "sha256:6f7a1ade365ca19da312cf6b96aed98eb6b67503d93f2a35846c608a777263df",
+        "description": "Arch Linux with Omarchy: its Hyprland desktop, themes and tools, logged in from boot",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "kernel": "sha256:269a8c0ba45531fa82432f0d14c2dce9a3466a5f5a0c9fa4d395b848fcfa7da2",
+        "creatable": false
+      },
+      {
+        "id": "omarchy",
+        "version": "2026-11-05.omarchy.1",
+        "digest": "sha256:c590ef83dc6d3c714661f33a54d7d0c50ebc2178dbdbd97f47163e70f1b84f52",
+        "description": "Arch Linux with Omarchy: its Hyprland desktop, themes and tools, logged in from boot",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "kernel": "sha256:269a8c0ba45531fa82432f0d14c2dce9a3466a5f5a0c9fa4d395b848fcfa7da2",
+        "creatable": true
+      },
+      {
+        "id": "omarchy",
+        "version": "2026-11-09.2249",
+        "digest": "sha256:fb684b7dd591f0f4ce60866a60c4dcc2a9ce26ee078f9dcfcbff992b16964168",
+        "description": "Arch Linux with Omarchy: its Hyprland desktop, themes and tools, logged in from boot",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 24
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "kernel": "sha256:269a8c0ba45531fa82432f0d14c2dce9a3466a5f5a0c9fa4d395b848fcfa7da2",
+        "creatable": true,
+        "latest": true,
+        "preboot": true,
+        "prebootSpecs": [
+          {
+            "vcpus": 4,
+            "memMiB": 8192,
+            "persistentDiskGiB": 20
+          }
+        ]
+      },
+      {
+        "id": "ci",
+        "version": "2026-10-28.14",
+        "digest": "sha256:598ae6e00e2a56fae3219091bac453384416b9e2e4549483bfe2099bc59b002d",
+        "description": "Ubuntu 24.04 with GitHub's Actions runner: a fresh box per GitHub Actions job (runs-on: instabox-medium), deleted when the job ends",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "ci",
+        "version": "2026-10-29.2",
+        "digest": "sha256:cfd817709798980fd140727f5185c2f983d85945c834f93697ba1e1cd0c17639",
+        "description": "Ubuntu 24.04 with GitHub's Actions runner: a fresh box per GitHub Actions job (runs-on: instabox-medium), deleted when the job ends",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 40
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "ci",
+        "version": "2026-10-29.9",
+        "digest": "sha256:777b604b185cd176041a782c31ea65757720aff5621edc5e8a4f982bfd0c4357",
+        "description": "Ubuntu 24.04 with GitHub's Actions runner: a fresh box per GitHub Actions job (runs-on: instabox-medium), deleted when the job ends",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 50
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": false
+      },
+      {
+        "id": "ci",
+        "version": "2026-10-29.10-ci.1",
+        "digest": "sha256:fccdc33d1a77bf1bf172b1cba8bf8d1e421bbd45085cc37c452e40d4885d6656",
+        "description": "Ubuntu 24.04 with GitHub's Actions runner: a fresh box per GitHub Actions job (runs-on: instabox-medium), deleted when the job ends",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 50
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": true
+      },
+      {
+        "id": "ci",
+        "version": "2026-11-03.1580-ci.1",
+        "digest": "sha256:7b27bd704e568ec7e3e679116b280c23c41ee65605749e511aedc0d4b01eae58",
+        "description": "Ubuntu 24.04 with GitHub's Actions runner: a fresh box per GitHub Actions job (runs-on: instabox-medium), deleted when the job ends",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 50
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": true
+      },
+      {
+        "id": "ci",
+        "version": "2026-11-05.ci.1",
+        "digest": "sha256:126029eaef4338069d4543cdf5fdc537d21ad357f1bfeb0ab78a46989f9cbe2d",
+        "description": "Ubuntu 24.04 with GitHub's Actions runner: a fresh box per GitHub Actions job (runs-on: instabox-medium), deleted when the job ends",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 80
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": true,
+        "latest": true,
+        "preboot": true,
+        "prebootSpecs": [
+          {
+            "vcpus": 4,
+            "memMiB": 8192,
+            "persistentDiskGiB": 20
+          },
+          {
+            "vcpus": 2,
+            "memMiB": 4096,
+            "persistentDiskGiB": 20
+          },
+          {
+            "vcpus": 8,
+            "memMiB": 16384,
+            "persistentDiskGiB": 20
+          }
+        ]
+      },
+      {
+        "id": "android",
+        "version": "2026-10-29.18",
+        "digest": "sha256:16cadbc65fce7d236c97cd0edbcf7c3d6dc640f0d5f1ce1aaa214435a63501ed",
+        "description": "The default plus Android 14 with adb, the phone on the desktop, for testing and driving Android apps",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 24
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "kernel": "sha256:ce5410c1d33fee70a331d765abeb61ccac68a892f81534307d2075044386d7b0",
+        "creatable": false
+      },
+      {
+        "id": "android",
+        "version": "2026-10-29.10-ci.1-t3.1-android.1",
+        "digest": "sha256:cb9b71586b18360b0efff13d6ef4ba985ee70de2092854234f6ae0e29718f6a4",
+        "description": "The default plus Android 14 with adb, the phone on the desktop, for testing and driving Android apps",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 24
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "kernel": "sha256:ce5410c1d33fee70a331d765abeb61ccac68a892f81534307d2075044386d7b0",
+        "creatable": true
+      },
+      {
+        "id": "android",
+        "version": "2026-11-01.3-android.1",
+        "digest": "sha256:a6b491fe100c6c246d47555232ac28d4150a1888a68bc9434bc08970c2fa1d86",
+        "description": "The default plus Android 14 with adb, the phone on the desktop, for testing and driving Android apps",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 24
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "kernel": "sha256:2a87e979d2dd1e0af3d1e37447bc8f8a49e6df38c593369a1f858e20bce1f74b",
+        "creatable": true
+      },
+      {
+        "id": "android",
+        "version": "2026-11-13.2685",
+        "digest": "sha256:199b94202f980ea592684471b5dc725c1238d3c28c7da130f2000653e89a82dc",
+        "description": "The default plus Android 14 with adb, the phone on the desktop, for testing and driving Android apps",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 24
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "kernel": "sha256:6a4771e699835fccdd256189b7cba888b9bb590ea0d8bd4b636cff386a15df0d",
+        "staged": true,
+        "creatable": true
+      },
+      {
+        "id": "android",
+        "version": "2026-11-02.7-android.1",
+        "digest": "sha256:d604e478b28116d4472eb015d4d991d182f2a0b2c28f46b3aef784ea97be4a4b",
+        "description": "The default plus Android 14 with adb, the phone on the desktop, for testing and driving Android apps",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 24
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "kernel": "sha256:2a87e979d2dd1e0af3d1e37447bc8f8a49e6df38c593369a1f858e20bce1f74b",
+        "creatable": true,
+        "latest": true,
+        "preboot": true,
+        "prebootSpecs": [
+          {
+            "vcpus": 4,
+            "memMiB": 8192,
+            "persistentDiskGiB": 20
+          }
+        ]
+      },
+      {
+        "id": "macos",
+        "version": "2026-11-02.1",
+        "digest": "sha256:723fc1a27a8fcc211ae2203728e4ec0919a0f52ad54b9e1b2d45fa674f277649",
+        "arch": "arm64",
+        "defaultSpec": {
+          "vcpus": 8,
+          "memMiB": 24576,
+          "persistentDiskGiB": 64
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "vm-display"
+        ],
+        "pool": "mac-m2pro",
+        "os": "macos",
+        "minimumLease": {
+          "hours": 24,
+          "hourUSD": 0.85,
+          "minimumUSD": 20.4
+        },
+        "hidden": true,
+        "creatable": false
+      },
+      {
+        "id": "macos",
+        "version": "2026-11-03.1",
+        "digest": "sha256:215b0df64a912fbda7d43defbd30383dcf88112ec407b65090dd1c956dd9fa4c",
+        "arch": "arm64",
+        "defaultSpec": {
+          "vcpus": 6,
+          "memMiB": 12288,
+          "persistentDiskGiB": 64
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "vm-display"
+        ],
+        "pool": "mac-m2pro",
+        "os": "macos",
+        "sizes": [
+          {
+            "vcpus": 12,
+            "memMiB": 24576,
+            "persistentDiskGiB": 64
+          }
+        ],
+        "minimumLease": {
+          "hours": 24,
+          "hourUSD": 0.85,
+          "minimumUSD": 20.4
+        },
+        "creatable": false
+      },
+      {
+        "id": "macos",
+        "version": "2026-11-04.1730-macos.1",
+        "digest": "sha256:de0379ff998c62d25822e2e7856bc1fccf7dedf47881c9034549364b9e9f6a62",
+        "arch": "arm64",
+        "defaultSpec": {
+          "vcpus": 6,
+          "memMiB": 12288,
+          "persistentDiskGiB": 64
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "vm-display"
+        ],
+        "pool": "mac-m2pro",
+        "os": "macos",
+        "sizes": [
+          {
+            "vcpus": 12,
+            "memMiB": 24576,
+            "persistentDiskGiB": 64
+          }
+        ],
+        "minimumLease": {
+          "hours": 24,
+          "hourUSD": 0.85,
+          "minimumUSD": 20.4
+        },
+        "creatable": false
+      },
+      {
+        "id": "macos",
+        "version": "2026-11-05.1789",
+        "digest": "sha256:83fa5c02bae2ef421eceac2a2d12e5ee348ebd39e8b58eccdbc33c63d53ac0bb",
+        "arch": "arm64",
+        "defaultSpec": {
+          "vcpus": 6,
+          "memMiB": 12288,
+          "persistentDiskGiB": 64
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "vm-display"
+        ],
+        "pool": "mac-m2pro",
+        "os": "macos",
+        "sizes": [
+          {
+            "vcpus": 12,
+            "memMiB": 24576,
+            "persistentDiskGiB": 64
+          }
+        ],
+        "minimumLease": {
+          "hours": 24,
+          "hourUSD": 0.85,
+          "minimumUSD": 20.4
+        },
+        "creatable": false
+      },
+      {
+        "id": "macos",
+        "version": "2026-11-08.2188",
+        "digest": "sha256:9c6e0b01e82b0d5aae6eaa4b61351437b18fa2e0cd220ca4ba449d037d461063",
+        "arch": "arm64",
+        "defaultSpec": {
+          "vcpus": 12,
+          "memMiB": 24576,
+          "persistentDiskGiB": 64
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "vm-display"
+        ],
+        "pool": "mac-m2pro",
+        "os": "macos",
+        "minimumLease": {
+          "hours": 24,
+          "hourUSD": 0.85,
+          "minimumUSD": 20.4
+        },
+        "models": [
+          {
+            "name": "m2pro",
+            "label": "M2 Pro",
+            "pool": "mac-m2pro",
+            "defaultSpec": {
+              "vcpus": 12,
+              "memMiB": 24576,
+              "persistentDiskGiB": 64
+            },
+            "minimumLease": {
+              "hours": 24,
+              "hourUSD": 0.85,
+              "minimumUSD": 20.4
+            }
+          },
+          {
+            "name": "m4pro",
+            "label": "M4 Pro",
+            "pool": "mac-m4pro",
+            "defaultSpec": {
+              "vcpus": 14,
+              "memMiB": 36864,
+              "persistentDiskGiB": 64
+            },
+            "minimumLease": {
+              "hours": 24,
+              "hourUSD": 1.25,
+              "minimumUSD": 30
+            }
+          },
+          {
+            "name": "m4",
+            "label": "M4",
+            "pool": "mac-m4",
+            "defaultSpec": {
+              "vcpus": 10,
+              "memMiB": 12288,
+              "persistentDiskGiB": 64
+            },
+            "minimumLease": {
+              "hours": 24,
+              "hourUSD": 0.75,
+              "minimumUSD": 18
+            }
+          },
+          {
+            "name": "m2",
+            "label": "M2",
+            "pool": "mac-m2",
+            "defaultSpec": {
+              "vcpus": 8,
+              "memMiB": 12288,
+              "persistentDiskGiB": 64
+            },
+            "minimumLease": {
+              "hours": 24,
+              "hourUSD": 0.45,
+              "minimumUSD": 10.8
+            }
+          }
+        ],
+        "creatable": true,
+        "latest": true,
+        "preboot": true,
+        "prebootSpecs": [
+          {
+            "vcpus": 12,
+            "memMiB": 24576,
+            "persistentDiskGiB": 64
+          }
+        ]
+      },
+      {
+        "id": "gpu",
+        "version": "2026-11-09.2294",
+        "digest": "sha256:2df9d373c3cc4c9801c58d9fc2c4f985bc26f81d3ea630a3a374e33e32712ebf",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 19
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "gpu": true,
+        "gpuTypes": [
+          {
+            "type": "l4",
+            "model": "NVIDIA L4",
+            "memGiB": 24,
+            "sizes": [
+              {
+                "vcpus": 11,
+                "memMiB": 36864,
+                "persistentDiskGiB": 100
+              }
+            ],
+            "maxPerMachine": 4,
+            "default": true
+          }
+        ],
+        "creatable": false
+      },
+      {
+        "id": "gpu",
+        "version": "2026-11-11.2538",
+        "digest": "sha256:e0f0a24efcdd67735204dcd3c2a8cf5c8170a6918e258febbfd1af4a0401a787",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 19
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "gpu": true,
+        "gpuTypes": [
+          {
+            "type": "l4",
+            "model": "NVIDIA L4",
+            "memGiB": 24,
+            "sizes": [
+              {
+                "vcpus": 11,
+                "memMiB": 36864,
+                "persistentDiskGiB": 100
+              }
+            ],
+            "maxPerMachine": 4,
+            "default": true
+          }
+        ],
+        "creatable": true,
+        "latest": true
+      },
+      {
+        "id": "gpu-metal",
+        "version": "2026-11-17.t8132df4a",
+        "digest": "sha256:8132df4a9b6f660d2319bb151babbebd5105298db01ebed998432cd09bbe9571",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 19
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "kernel": "sha256:780a3311339067f631f711ab94ce1f362c9fe49dfafd226e33d2ba31583faba5",
+        "gpu": true,
+        "gpuMode": "metal",
+        "gpuTypes": [
+          {
+            "type": "h100",
+            "model": "NVIDIA H100 PCIe",
+            "memGiB": 80,
+            "sizes": [
+              {
+                "vcpus": 44,
+                "memMiB": 229376,
+                "persistentDiskGiB": 200
+              }
+            ],
+            "maxPerMachine": 1,
+            "default": true
+          }
+        ],
+        "staged": true,
+        "creatable": true,
+        "latest": true
+      },
+      {
+        "id": "gpu-metal",
+        "version": "2026-11-15.2885",
+        "digest": "sha256:e2b3be96b2f7bbae55ea9bad51e1fbeda80c6971e1c5d67b2a46b25a4d6d7d9b",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 19
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "kernel": "sha256:780a3311339067f631f711ab94ce1f362c9fe49dfafd226e33d2ba31583faba5",
+        "gpu": true,
+        "gpuMode": "metal",
+        "gpuTypes": [
+          {
+            "type": "h100",
+            "model": "NVIDIA H100 PCIe",
+            "memGiB": 80,
+            "sizes": [
+              {
+                "vcpus": 44,
+                "memMiB": 229376,
+                "persistentDiskGiB": 200
+              }
+            ],
+            "maxPerMachine": 1,
+            "default": true
+          }
+        ],
+        "creatable": false
+      },
+      {
+        "id": "minimal",
+        "version": "2026-11-16.tbd0f8340",
+        "digest": "sha256:bd0f83401758bb0d68145a8ccc3743df1a679460c80a330d2ae46f0aaf44ecf1",
+        "description": "A small box with the main dev tools (git, curl, wget, a C toolchain, Python with pip and venv, Node.js and npm, vim, nano); install what you want. Pro plan",
+        "arch": "x86_64",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 8
+        },
+        "capabilities": [
+          "identity-reset",
+          "root-grow",
+          "guest-user"
+        ],
+        "creatable": true,
+        "latest": true
+      }
+    ]
+  },
+  "machines": {
+    "machines": [
+      {
+        "id": "m_agqu7ryw65ksqqvxutk6nvttxy",
+        "name": "cassia",
+        "desiredState": "running",
+        "state": "running",
+        "revision": 109,
+        "operationId": null,
+        "template": {
+          "id": "agent-browser",
+          "version": "2026-10-15.4",
+          "digest": "sha256:dcd05703722b04dc1ccea03264ce13ec96cb431423c9419d7394bec97f0cf52f"
+        },
+        "snapshot": {
+          "id": "sn_agqu6whtel3dllwwb7uavrkhuq"
+        },
+        "image": {
+          "id": "sn_agqu6whtel3dllwwb7uavrkhuq"
+        },
+        "spec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "storage": {
+          "sizeGiB": 20,
+          "mountPath": "/data",
+          "persistent": true,
+          "synced": true,
+          "snapshotSeq": 52
+        },
+        "runtime": {
+          "ready": true,
+          "processesPreserved": true
+        },
+        "autoSuspendAfterSeconds": 1800,
+        "maxRunMinutes": 120,
+        "runStartedAt": "2026-11-17T11:44:13.51199Z",
+        "readyAt": "2026-11-17T11:46:23.482609Z",
+        "cooldownUntil": "2026-11-08T09:53:15.017471Z",
+        "metadata": {},
+        "vault": true,
+        "guestUser": "user",
+        "orgId": "org_0d1deedc1d074283b122e4fea341f20e",
+        "free": true,
+        "oomKills": 0,
+        "createdAt": "2026-10-18T16:10:10.038678Z",
+        "updatedAt": "2026-11-17T11:46:23.482344Z"
+      },
+      {
+        "id": "m_agqyxark46f72uak3gv2b5rmee",
+        "name": "halo-dsh",
+        "desiredState": "running",
+        "state": "running",
+        "revision": 65,
+        "operationId": null,
+        "template": {
+          "id": "agent-browser",
+          "version": "2026-10-29.18",
+          "digest": "sha256:bd882c53b069da157ce42cce61771d6e4df80a9b9f3a1b820ee6c6216c81890d"
+        },
+        "spec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "storage": {
+          "sizeGiB": 20,
+          "mountPath": "/data",
+          "persistent": true,
+          "synced": true,
+          "snapshotSeq": 32
+        },
+        "runtime": {
+          "ready": true,
+          "processesPreserved": true
+        },
+        "autoSuspendAfterSeconds": 1800,
+        "maxRunMinutes": 120,
+        "runStartedAt": "2026-11-17T12:10:33.314641Z",
+        "readyAt": "2026-11-17T12:10:33.314756Z",
+        "cooldownUntil": "2026-11-09T12:57:52.524221Z",
+        "metadata": {},
+        "vault": true,
+        "guestUser": "user",
+        "orgId": "org_0d1deedc1d074283b122e4fea341f20e",
+        "free": true,
+        "oomKills": 0,
+        "createdAt": "2026-10-30T06:32:06.107721Z",
+        "updatedAt": "2026-11-17T12:10:35.835753Z"
+      },
+      {
+        "id": "m_agq3545zpulbiu5m5wmisuq4ki",
+        "name": "1",
+        "desiredState": "suspended",
+        "state": "suspended",
+        "revision": 8,
+        "operationId": null,
+        "template": {
+          "id": "agent-browser",
+          "version": "2026-10-15.4",
+          "digest": "sha256:dcd05703722b04dc1ccea03264ce13ec96cb431423c9419d7394bec97f0cf52f"
+        },
+        "snapshot": {
+          "id": "sn_agqu6whtel3dllwwb7uavrkhuq"
+        },
+        "image": {
+          "id": "sn_agqu6whtel3dllwwb7uavrkhuq"
+        },
+        "spec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "storage": {
+          "sizeGiB": 20,
+          "mountPath": "/data",
+          "persistent": true,
+          "synced": true,
+          "snapshotSeq": 4
+        },
+        "runtime": {
+          "ready": false,
+          "processesPreserved": true
+        },
+        "autoSuspendAfterSeconds": 1800,
+        "maxRunMinutes": 480,
+        "runStartedAt": null,
+        "cooldownUntil": "2026-11-13T11:03:51.560209Z",
+        "autoSuspendedAt": "2026-11-13T10:47:50.699844Z",
+        "metadata": {},
+        "vault": true,
+        "guestUser": "user",
+        "orgId": "org_0d1deedc1d074283b122e4fea341f20e",
+        "free": true,
+        "oomKills": 0,
+        "createdAt": "2026-11-09T06:16:46.190928Z",
+        "updatedAt": "2026-11-13T10:48:13.505722Z"
+      },
+      {
+        "id": "m_agq5ve2acufmdsdmetqnkxhm2q",
+        "name": "omarchy-lnyh",
+        "desiredState": "suspended",
+        "state": "suspended",
+        "revision": 2,
+        "operationId": null,
+        "template": {
+          "id": "omarchy",
+          "version": "2026-11-09.2249",
+          "digest": "sha256:fb684b7dd591f0f4ce60866a60c4dcc2a9ce26ee078f9dcfcbff992b16964168",
+          "kernel": "sha256:269a8c0ba45531fa82432f0d14c2dce9a3466a5f5a0c9fa4d395b848fcfa7da2"
+        },
+        "spec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 24
+        },
+        "storage": {
+          "sizeGiB": 20,
+          "mountPath": "/data",
+          "persistent": true,
+          "synced": true,
+          "snapshotSeq": 1
+        },
+        "runtime": {
+          "ready": false
+        },
+        "autoSuspendAfterSeconds": 1800,
+        "maxRunMinutes": 480,
+        "runStartedAt": null,
+        "cooldownUntil": null,
+        "metadata": {},
+        "vault": true,
+        "guestUser": "user",
+        "orgId": "org_0d1deedc1d074283b122e4fea341f20e",
+        "free": true,
+        "oomKills": 0,
+        "createdAt": "2026-11-14T15:00:45.705699Z",
+        "updatedAt": "2026-11-14T16:51:14.934561Z"
+      }
+    ],
+    "nextCursor": null
+  },
+  "snapshots": {
+    "snapshots": [
+      {
+        "id": "sn_agq36myfpjzswkboflbscfhthi",
+        "name": "1109-01",
+        "orgId": "org_0d1deedc1d074283b122e4fea341f20e",
+        "sourceMachineId": "m_agq3545zpulbiu5m5wmisuq4ki",
+        "sourceSnapshotSeq": 1,
+        "template": {
+          "id": "agent-browser",
+          "version": "2026-10-15.4",
+          "digest": "sha256:dcd05703722b04dc1ccea03264ce13ec96cb431423c9419d7394bec97f0cf52f"
+        },
+        "rootSizeBytes": 17179869184,
+        "dataSizeBytes": 21474836480,
+        "createdAt": "2026-11-09T07:25:54.416231Z",
+        "defaultSpec": {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20,
+          "rootDiskGiB": 16
+        },
+        "status": "ready",
+        "guestUser": "user"
+      }
+    ]
+  },
+  "usage": {
+    "computedAt": "2026-11-17T01:29:03.154915Z",
+    "logicalBytes": 201863462912,
+    "storedBytes": 30944364419,
+    "exclusiveBytes": 0,
+    "machines": 4,
+    "snapshots": 1,
+    "images": 1,
+    "limits": {
+      "maxMachines": 5,
+      "machineSpec": {
+        "vcpus": 4,
+        "memMiB": 8192,
+        "persistentDiskGiB": 20
+      },
+      "machineSpecs": [
+        {
+          "vcpus": 4,
+          "memMiB": 8192,
+          "persistentDiskGiB": 20
+        }
+      ],
+      "maxSnapshots": 5,
+      "maxStoredGiB": 200,
+      "maxImages": 5,
+      "liveSnapshots": true,
+      "vault": {
+        "maxItems": 100,
+        "maxBytes": 262144
+      },
+      "orgSecrets": true,
+      "unlimited": []
+    },
+    "allocatedDiskGiB": 80,
+    "storage": {
+      "machines": [
+        {
+          "id": "m_agqu7ryw65ksqqvxutk6nvttxy",
+          "name": "cassia",
+          "state": "running",
+          "sizeBytes": 21474836480,
+          "diskBytes": 8229294634,
+          "snapshots": 0,
+          "snapshotBytes": 0
+        },
+        {
+          "id": "m_agqyxark46f72uak3gv2b5rmee",
+          "name": "halo-dsh",
+          "state": "running",
+          "sizeBytes": 21474836480,
+          "diskBytes": 11337130241,
+          "snapshots": 0,
+          "snapshotBytes": 0
+        },
+        {
+          "id": "m_agq3545zpulbiu5m5wmisuq4ki",
+          "name": "1",
+          "state": "suspended",
+          "sizeBytes": 21474836480,
+          "diskBytes": 4587730113,
+          "snapshots": 1,
+          "snapshotBytes": 2546725099
+        },
+        {
+          "id": "m_agq5ve2acufmdsdmetqnkxhm2q",
+          "name": "omarchy-lnyh",
+          "state": "suspended",
+          "sizeBytes": 21474836480,
+          "diskBytes": 4243484332,
+          "snapshots": 0,
+          "snapshotBytes": 0
+        }
+      ],
+      "deletedMachineSnapshots": 0,
+      "deletedMachineSnapshotBytes": 0
+    },
+    "cost": {
+      "periodStart": "2026-11-01T00:00:00Z",
+      "periodEnd": "2026-12-01T00:00:00Z",
+      "machines": 4,
+      "freeMachines": 4,
+      "freeSandboxHours": 323.7137149547222,
+      "running": 0,
+      "snapshots": 1,
+      "vcpuHours": 1294.8548598188888,
+      "memGiBHours": 2589.7097196377777,
+      "storageGiBHours": 0,
+      "egressGiB": 0,
+      "runtimeUSD": 0,
+      "vcpuUSD": 0,
+      "memUSD": 0,
+      "storageUSD": 0,
+      "egressUSD": 0,
+      "costUSD": 0,
+      "allowanceUSD": 0,
+      "creditRemainingUSD": 0,
+      "overageUSD": 0,
+      "remainingUSD": 0,
+      "ratedUntil": "2026-11-17T12:00:00Z",
+      "billableDiskGiB": 0,
+      "freeDiskGiBPerSandbox": 0,
+      "includedDiskGiB": 0,
+      "allocatedDiskGiB": 80,
+      "storedBytes": null,
+      "storageComputedAt": null,
+      "creditsUSD": 0,
+      "creditsUsedUSD": 0
+    },
+    "org": {
+      "id": "org_0d1deedc1d074283b122e4fea341f20e",
+      "name": "cypggs@gmail.com",
+      "tier": "free",
+      "kind": "personal"
+    }
+  },
+  "machine": {
+    "id": "m_agqyxark46f72uak3gv2b5rmee",
+    "name": "halo-dsh",
+    "desiredState": "running",
+    "state": "running",
+    "revision": 65,
+    "operationId": null,
+    "template": {
+      "id": "agent-browser",
+      "version": "2026-10-29.18",
+      "digest": "sha256:bd882c53b069da157ce42cce61771d6e4df80a9b9f3a1b820ee6c6216c81890d"
+    },
+    "spec": {
+      "vcpus": 4,
+      "memMiB": 8192,
+      "persistentDiskGiB": 20,
+      "rootDiskGiB": 16
+    },
+    "storage": {
+      "sizeGiB": 20,
+      "mountPath": "/data",
+      "persistent": true,
+      "synced": true,
+      "snapshotSeq": 32
+    },
+    "runtime": {
+      "ready": true,
+      "processesPreserved": true
+    },
+    "autoSuspendAfterSeconds": 1800,
+    "maxRunMinutes": 120,
+    "runStartedAt": "2026-11-17T12:10:33.314641Z",
+    "readyAt": "2026-11-17T12:10:33.314756Z",
+    "cooldownUntil": "2026-11-09T12:57:52.524221Z",
+    "metadata": {},
+    "vault": true,
+    "guestUser": "user",
+    "orgId": "org_0d1deedc1d074283b122e4fea341f20e",
+    "free": true,
+    "oomKills": 0,
+    "createdAt": "2026-10-30T06:32:06.107721Z",
+    "updatedAt": "2026-11-17T12:10:35.835753Z"
+  },
+  "ports": {
+    "enabled": true,
+    "ports": [
+      {
+        "id": "pv-abweg5nysh3m4efhychd35srv4",
+        "machineId": "m_agqu7ryw65ksqqvxutk6nvttxy",
+        "port": 3000,
+        "name": "MyGo Cloud Music Web",
+        "protocol": "http",
+        "url": "https://3000-agqu7ryw65ksqqvxutk6nvttxy.instabox.tech",
+        "createdAt": "2026-11-05T07:48:14.502809Z",
+        "access": "public",
+        "expiresAt": null
+      },
+      {
+        "id": "pv-yas3udvhkcv5qfrjrevi3v74ne",
+        "machineId": "m_agqu7ryw65ksqqvxutk6nvttxy",
+        "port": 3001,
+        "name": "Port 3001",
+        "protocol": "http",
+        "url": "https://3001-agqu7ryw65ksqqvxutk6nvttxy.instabox.tech",
+        "createdAt": "2026-11-03T04:32:10.215113Z",
+        "access": "public",
+        "expiresAt": null
+      },
+      {
+        "id": "pv-gnjrmnh6m5uj54dqsxg7kvxmvu",
+        "machineId": "m_agqu7ryw65ksqqvxutk6nvttxy",
+        "port": 3773,
+        "name": "T3 Code",
+        "protocol": "http",
+        "url": "https://3773-agqu7ryw65ksqqvxutk6nvttxy.instabox.tech",
+        "createdAt": "2026-11-04T12:34:16.084445Z",
+        "access": "private",
+        "expiresAt": null
+      },
+      {
+        "id": "pv-ebkuhwkhgzzm5qoe2endu5ysiy",
+        "machineId": "m_agqu7ryw65ksqqvxutk6nvttxy",
+        "port": 6767,
+        "name": "Port 6767",
+        "protocol": "http",
+        "url": "https://6767-agqu7ryw65ksqqvxutk6nvttxy.instabox.tech",
+        "createdAt": "2026-11-04T03:05:29.0671Z",
+        "access": "public",
+        "expiresAt": null
+      },
+      {
+        "id": "pv-hi45et6rlrslqtzodkjkoewtny",
+        "machineId": "m_agqu7ryw65ksqqvxutk6nvttxy",
+        "port": 8080,
+        "name": "Port 8080",
+        "protocol": "http",
+        "url": "https://8080-agqu7ryw65ksqqvxutk6nvttxy.instabox.tech",
+        "createdAt": "2026-10-18T16:14:45.994407Z",
+        "access": "public",
+        "expiresAt": null
+      },
+      {
+        "id": "pv-cvq5mgxpchpailchjwko26hqji",
+        "machineId": "m_agqu7ryw65ksqqvxutk6nvttxy",
+        "port": 8090,
+        "name": "Port 8090",
+        "protocol": "http",
+        "url": "https://8090-agqu7ryw65ksqqvxutk6nvttxy.instabox.tech",
+        "createdAt": "2026-11-16T15:59:20.329714Z",
+        "access": "public",
+        "expiresAt": null
+      },
+      {
+        "id": "pv-zrtglrs6mruf3567obowwmtlvu",
+        "machineId": "m_agqu7ryw65ksqqvxutk6nvttxy",
+        "port": 8091,
+        "name": "Port 8091",
+        "protocol": "http",
+        "url": "https://8091-agqu7ryw65ksqqvxutk6nvttxy.instabox.tech",
+        "createdAt": "2026-11-16T16:21:41.673747Z",
+        "access": "public",
+        "expiresAt": null
+      },
+      {
+        "id": "pv-62f5qxgw3xtuhnvouygdv62wrm",
+        "machineId": "m_agqyxark46f72uak3gv2b5rmee",
+        "port": 3456,
+        "name": "Port 3456",
+        "protocol": "http",
+        "url": "https://3456-agqyxark46f72uak3gv2b5rmee.instabox.tech",
+        "createdAt": "2026-10-30T09:04:09.300379Z",
+        "access": "public",
+        "expiresAt": null
+      },
+      {
+        "id": "pv-3r4qnxp6twykhnezavcnluzbku",
+        "machineId": "m_agqyxark46f72uak3gv2b5rmee",
+        "port": 6080,
+        "name": "nuphos",
+        "protocol": "http",
+        "url": "https://6080-agqyxark46f72uak3gv2b5rmee.instabox.tech",
+        "createdAt": "2026-11-04T08:14:00.665185Z",
+        "access": "private",
+        "expiresAt": null
+      },
+      {
+        "id": "pv-c3q6uspsi5ns5ihpvrfkhutp3u",
+        "machineId": "m_agqyxark46f72uak3gv2b5rmee",
+        "port": 8080,
+        "name": "Port 8080",
+        "protocol": "http",
+        "url": "https://8080-agqyxark46f72uak3gv2b5rmee.instabox.tech",
+        "createdAt": "2026-11-02T03:48:00.15899Z",
+        "access": "public",
+        "expiresAt": null
+      },
+      {
+        "id": "pv-her5vcbsc67pkhrstpljcgx5lu",
+        "machineId": "m_agqyxark46f72uak3gv2b5rmee",
+        "port": 9090,
+        "name": "Port 9090",
+        "protocol": "http",
+        "url": "https://9090-agqyxark46f72uak3gv2b5rmee.instabox.tech",
+        "createdAt": "2026-11-02T04:21:21.497496Z",
+        "access": "public",
+        "expiresAt": null
+      }
+    ]
+  }
+}
